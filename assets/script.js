@@ -1,11 +1,13 @@
 let map;
 
+// 28.601850034893445, -81.19759825701948
+
 async function initMap() {
   const { Map } = await google.maps.importLibrary("maps");
 
   map = new Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
+    center: { lat: 28.601850034893445, lng: -81.19759825701948 },
+    zoom: 15,
   });
 }
 
