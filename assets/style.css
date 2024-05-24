@@ -2,9 +2,17 @@
     height: 100%;
   }
 
-  html,
+html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+#knightimg{
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
