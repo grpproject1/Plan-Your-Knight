@@ -1,10 +1,59 @@
 #map {
-    height: 100%;
+    height: 60vh;
+    width: 60vw;
   }
 
-  html,
-body {
+html {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+#knightimg{
+  height: 300px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+main {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: black;
+  height: 70px;
+  color: white;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  font-size: 15px;
+  list-style: none;
+  margin-top: 50px;
+
+}
+
+footer ul li {
+  margin: 15px;
+}
+
+footer ul li a {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 5px;
+  border: 2px solid white;
 }
