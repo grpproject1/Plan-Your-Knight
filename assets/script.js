@@ -13,3 +13,28 @@ async function initMap() {
 
 
 
+
+initMap();
+
+// function searchBar
+// currentData = {
+//     query 
+
+
+// }
+
+
+const input = document.getElementById("searchBar");
+const searchBox = new google.maps.places.SearchBox(input);
+
+findPlaceFromQuery(request, function(results, status) {
+  if (status === google.maps.places.PlacesServiceStatus.OK) {
+    for ( var i= 0; i <results.length; i++) {
+      createMarker(results[i]);
+    }
+    map.setCenter(results[0].geometry.location);
+  }
+})
+
+//nearby search data?
+console.log(currentData);
