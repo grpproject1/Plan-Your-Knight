@@ -11,11 +11,5 @@ async function initMap() {
   });
 }
 
-const input = document.getElementById("")
-
-
-//most_relevant
-
-initMap();
 
 
