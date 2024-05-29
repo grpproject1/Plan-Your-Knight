@@ -16,11 +16,7 @@ async function initMap() {
 
 initMap();
 
-// fetch(url).then(response => {
-//   return response.json()
-// }).then(data => {
-//   console.log(data);
-// });
+
 
 // function searchBar
 // currentData = {
@@ -68,4 +64,5 @@ initMap();
 //   markers = [];
 
 //nearby search data?
-//console.Log(currentData);
+//console.Log(currentData)
+
