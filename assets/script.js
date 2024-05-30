@@ -17,6 +17,7 @@ async function initMap() {
 initMap();
 
 
+<<<<<<< erica-2
 
 
 
@@ -35,6 +36,8 @@ initMap();
 // }).then(data => {
 //   console.log(data);
 // });
+=======
+>>>>>>> main
 
 // function searchBar
 // currentData = {
@@ -82,4 +85,5 @@ initMap();
 //   markers = [];
 
 //nearby search data?
-//console.Log(currentData);
+//console.Log(currentData)
+
