@@ -189,3 +189,40 @@ initMap();
 //nearby search data?
 //console.Log(currentData)
 
+
+// ////////////////////////////////////////////////////////////////////////// (SECOND API: geoapify)
+
+// API Key for GeoApify: d3720612c9c24768b1672bff3ae0a512
+// The below data is all pulled via the geoapify API to populate the closest restaurant and parking locations (up to 20 each) within 1 mile radius of UCF
+
+// Fetch data for restaurants:
+const restaurantsURL = "https://api.geoapify.com/v2/places?categories=catering.restaurant&filter=circle:-81.197125012,28.59899755,1610&bias=proximity:-81.197125012,28.59899755&limit=20&apiKey=d3720612c9c24768b1672bff3ae0a512";
+
+fetch(restaurantsURL)
+  .then(response => response.json())
+  .then(data => {
+    for (let i = 0; i < data.features.length; i++) {
+      console.log(data.features[i].properties.name);
+      console.log(data.features[i].properties.lon);
+      console.log(data.features[i].properties.lat);
+    }
+  })
+  .catch(error => console.error('Error:', error));
+
+
+// Fetch data for parking:
+const parkingURL= "https://api.geoapify.com/v2/places?categories=parking&filter=circle:-81.197125012,28.59899755,1610&bias=proximity:-81.197125012,28.59899755&limit=20&apiKey=d3720612c9c24768b1672bff3ae0a512";
+
+fetch(parkingURL)
+  .then(response => response.json())
+  .then(data => {
+    for (let i = 0; i < data.features.length; i++) {
+      console.log(data.features[i].properties.name);
+      console.log(data.features[i].properties.lon);
+      console.log(data.features[i].properties.lat);
+    }
+  })
+  .catch(error => console.error('Error:', error));
+
+
+  
