@@ -6,15 +6,56 @@ const url = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + "https://
 
 
 async function initMap() {
+
+  var options = {
+    zoom: 16,
+    center: { lat: 28.601850034893445, lng: -81.19759825701948 },
+    
+  }
+
+  //new map
+  var map = new
+  google.maps.Map(document.getElementById('map'), options);
+  
+  
   const { Map } = await google.maps.importLibrary("maps");
 
-map = new Map(document.getElementById("map"), {
-    center: { lat: 28.601850034893445, lng: -81.19759825701948 },
-    zoom: 14
-  });
+  
+    //Add Marker
+  // var marker = new google.maps.Marker({
+  //   position:{lat:42.4668, lng: -70.9495},
+  //   map: map
+  // });
+
+  // var infoWindow = new google.maps.InfoWindow({
+  //   content:'<h1>woof</h1>'
+  // });
+
+  // marker.addListener('click', function(){
+  //   infoWindow.open(map, marker);
+  // });
+
+
+  addMarker({lat:42.4668, lng: -70.9495});
+  addMarker({lat: 28.602023173142335, lng: -81.20025877273342,});
+  
+  
+  
+
+    //Add Marker Function
+  function addMarker(coords){
+    var marker = new google.maps.Marker({
+      position: coords,
+      map: map
+    });
+  }
+
 }
 
+
 initMap();
+
+
 
 
 
