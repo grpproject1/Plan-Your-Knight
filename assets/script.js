@@ -13,6 +13,7 @@ async function initMap() {
     
   }
 
+  //new map
   var map = new
   google.maps.Map(document.getElementById('map'), options);
   
@@ -20,38 +21,40 @@ async function initMap() {
   const { Map } = await google.maps.importLibrary("maps");
 
   
+    //Add Marker
+  // var marker = new google.maps.Marker({
+  //   position:{lat:42.4668, lng: -70.9495},
+  //   map: map
+  // });
 
-  var marker = new google.maps.Marker({
-    position:{lat:42.4668, lng: -70.9495},
-    map: map
-  });
+  // var infoWindow = new google.maps.InfoWindow({
+  //   content:'<h1>woof</h1>'
+  // });
 
-  var infoWindow = new google.maps.InfoWindow({
-    content:'<h1>woof</h1>'
-  });
+  // marker.addListener('click', function(){
+  //   infoWindow.open(map, marker);
+  // });
 
-  marker.addListener('click', function(){
-    infoWindow.open(map, marker);
-  });
 
+  addMarker({lat:42.4668, lng: -70.9495});
+  addMarker({lat: 28.602023173142335, lng: -81.20025877273342,});
+  
+  
+  
+
+    //Add Marker Function
+  function addMarker(coords){
+    var marker = new google.maps.Marker({
+      position: coords,
+      map: map
+    });
+  }
 
 }
 
+
 initMap();
 
-
-
-// addMarker({
-//   coords:{lat:42.8584, lng: -70.9300}
-// })
-
-// function addMarker(props){
-//   var marker = new google.maps.marker({
-//     positon:coords,
-//     map:map,
-//     icon:props.iconImage
-//   })
-// }
 
 
 
