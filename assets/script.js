@@ -5,7 +5,6 @@ const APIKEY = "AIzaSyDiGQQfGOQhaN__gJWQzYbepqVG05NmqTI"
 const url = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + "https://maps.googleapis.com/maps/api/js?key=AIzaSyCHs1VhqYAn40Laryj8LL-DD7mZ-RiS0qI&loading=async&libraries=places&callback=initMap";
 
 
-initMap();
 
 async function initMap() {
 
@@ -122,6 +121,10 @@ async function initMap() {
   }
 
 }
+
+
+initMap();
+
 
 
 
