@@ -345,6 +345,64 @@ fetch(parkingURL)
     .catch(function(error) {
       console.error('Error:', error);
     });
-  
+
+
+    // function checkRadio(){
+    //   const selectedFood = document.getElementById(flexRadioDefault1);
+
+    //   const foodMap =  filterFood([ 
+
+    //     ['63 South', lat: 28.5979074, long: -81.1998033],
+    //     ['Smoke & Donuts BBQ', lat: 28.6017791, long: -81.2003765],
+    //     ['Bento Sushi', lat: 28.6020943, long: -81.2004807],
+    //     ["Huey Magoo's", lat: 28.6021939, long: -81.2003916],
+    //     ['Burger U', lat: 28.6070409, long: -81.1965718],
+    //     ['Gringos Locos', lat: 28.607229, long: -81.1982791],
+    //     ["Knightro's", lat: 28.6074513, long: -81.196767]
+    //     ['Island Wing Company', lat: 28.5992518, long: -81.2083276],
+    //     ['Bar Louie', lat: 28.5982393, long: -81.2083331],
+    //     ['Blaze Pizza', lat: 28.5989547, long: -81.2083693],
+    //     ['Habaneros Mexican Grill', lat: 28.5972977, long: -81.208849],
+    //     ['Noodles & Company', lat: 28.5982339, long: -81.2091551],
+    //     ['Sushi B Hibachi Grill', lat: 28.5973159, long: -81.2095429],
+    //     ['Bacon Bitch', lat: 28.5972162, long: -81.2108306]
+    //   ]);
+
+    //   if (foodMap === true){
+    //     console.log(filterFood);
+    //   } else {
+    //     console.log();
+    //   }
+    // }
+
+
+    // Attempt to find users current location
+    // x=navigator.geolocation;
+
+    // x.getCurrentPosition(success, failure);
+
+    // function success(position){
+    //   let myLat = position.coords.latitude;
+    //   let myLong = position.coords.longitude;
+
+    //   let coords = new google.maps.LatLng(myLat, myLong);
+
+    //   const mapOptions = {
+    //     zoom: 14,
+    //     center: coords,
+    //     mapTypeId: google.maps.MapTypeId.ROADMAP
+    //   }
+
+    //   const map = new google.maps.Map(document.getElementById("map"),mapOptions)
+    //   const marker = new google.maps.Marker({
+    //     map:map,
+    //     position: coords
+    //   });
+    // }
+
+    // function failure(){}
+
+
+
 
   
