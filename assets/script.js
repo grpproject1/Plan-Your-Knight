@@ -39,7 +39,26 @@ async function initMap() {
   addMarker({lat:42.4668, lng: -70.9495});
   addMarker({lat: 28.602023173142335, lng: -81.20025877273342,});
   
-  
+  const p1 = addMarker({lat: 28.59931385, lng: -81.19764343879355,});
+  const p2 = addMarker({lat: 28.5989923, lng: -81.19753491921549,});
+  const p3 = addMarker({lat: 28.59965215, lng: -81.1977661889483,});
+  const p4 = addMarker({lat: 28.59753485, lng: -81.19666027674731,});
+  const p5 = addMarker({lat: 28.59726535, lng: -81.1974185836448,});
+  const p6 = addMarker({lat: 28.5972515, lng: -81.19732777976934,});
+  const p7 = addMarker({lat: 28.59729765, lng: -81.19658849689151,});
+  const p8 = addMarker({lat: 28.596887000000002, lng: -81.196147443348,});
+  const p9 = addMarker({lat: 28.601376700000003, lng: -81.19602257741718,});
+  const p10 = addMarker({lat: 28.59702355, lng: -81.1989022761598,});
+  const p11 = addMarker({lat: 28.596522, lng: -81.19800161744283,});
+  const p12 = addMarker({lat: 28.5964478, lng: -81.19591531228271,});
+  const p13 = addMarker({lat: 28.5961117, lng: -81.19668386523279,});
+  const p14 = addMarker({lat: 28.5964679, lng: -81.1967058,});
+  const p15 = addMarker({lat: 28.5963482, lng: -81.1969695,});
+  const p16 = addMarker({lat: 28.60256305, lng: -81.19571185092033,});
+  const p17 = addMarker({lat: 28.6017295, lng: -81.1963112,});
+  const p18 = addMarker({lat: 28.6017437, lng: -81.1963215,});
+  const p19 = addMarker({lat: 28.59690265, lng: -81.20040525132633,});
+  const p20 = addMarker({lat: 28.601756, lng: -81.1958105,});
   
 
     //Add Marker Function
