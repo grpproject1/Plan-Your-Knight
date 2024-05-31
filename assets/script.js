@@ -5,6 +5,8 @@ const APIKEY = "AIzaSyDiGQQfGOQhaN__gJWQzYbepqVG05NmqTI"
 const url = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + "https://maps.googleapis.com/maps/api/js?key=AIzaSyCHs1VhqYAn40Laryj8LL-DD7mZ-RiS0qI&loading=async&libraries=places&callback=initMap";
 
 
+initMap();
+
 async function initMap() {
 
   var options = {
@@ -36,8 +38,32 @@ async function initMap() {
   // });
 
 
-  addMarker({lat:42.4668, lng: -70.9495});
-  addMarker({lat: 28.602023173142335, lng: -81.20025877273342,});
+  //Custom Marker Template
+  // addMarker((
+  //   {coords:lat:  , lng:    },
+  //   iconImage: ''
+  //   content: '<h1> Insert Text Here </h1>
+  // ));
+
+  //Array of markers
+  var markers = [
+    {
+      coords:{lat: 28.602023173142335, lng: -81.20025877273342,},
+      content:'<h1>bork bork</h1>'
+    },
+    {coords:{lat:42.4668, lng: -70.9495},
+    content: '<h1>morp</h1>'}
+
+
+  ];
+
+  //Loop through markers
+
+  addMarker({coords:{lat:42.4668, lng: -70.9495}});
+  addMarker({
+    coords:{lat: 28.602023173142335, lng: -81.20025877273342,},
+    content:'<h1>bork bork</h1>'
+  });
   
   const p1 = addMarker({lat: 28.59931385, lng: -81.19764343879355,});
   const p2 = addMarker({lat: 28.5989923, lng: -81.19753491921549,});
@@ -62,32 +88,40 @@ async function initMap() {
   
 
     //Add Marker Function
-  function addMarker(coords){
+    //in order to add a custom image 
+    //icon: props.iconImage
+    //needs to be added under map:map inside of this function
+  function addMarker(props){
     var marker = new google.maps.Marker({
-      position: coords,
+      position: props.coords,
       map: map
+      //icon:props.iconImage
     });
+
+
+    //If you guys implement custom icons uncomment this
+
+    // //Check for customicon
+    // if(props.iconImage){
+    //   //Set icon image
+    //   marker.secIcon(props.iconImage);
+    // }
+
+    //Check Content
+    if(props.content) {
+      var infoWindow = new google.maps.InfoWindow({
+        content:props.content
+      });
+
+      marker.addListener('click', function(){
+        infoWindow.open(map, marker);
+      });
+
+    }
+
   }
 
 }
-
-
-initMap();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
