@@ -1,4 +1,7 @@
 let map;
+let service;
+let infowindow;
+
 
 const APIKEY = "AIzaSyCHs1VhqYAn40Laryj8LL-DD7mZ-RiS0qI"
 
@@ -6,7 +9,6 @@ const url = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + "https://
 
 
 async function initMap() {
-  // Request needed libraries.
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
   const map = new Map(document.getElementById("map"), {
@@ -14,13 +16,45 @@ async function initMap() {
     zoom: 14,
     mapId: "f3c18e711fa3469e",
   });
-  //create a new const marker below to add addtional markers below
-  const marker = new AdvancedMarkerElement({
+  
+    const marker = new AdvancedMarkerElement({
     map,
-    position: { lat: 28.601850034893445, lng: -81.19759825701948},
+    position: {lat: 28.601850034893445, lng: -81.19759825701948},//main campus
+    position: {lat: 28.608048, lng: -81.19266}, //stadium
+    position: {lat: 28.60834, lng: -81.19734}, //arena
+    position: {lat: 28.60223, lng: -81.20029},  //student union
+    position: {lat: 28.60480, lng: -81.19869} //memory mall tailgate
     });
+    //info for marker locations UCF main campus, stadium, arena, student union (student discout pickup)
+    //one location for tailgating
 
-    
+    function initialize() {
+        let orlando = new google.maps.LatLng(-81.19759825701948,28.601850034893445);
+      
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: orlando,
+            zoom: 15
+          });
+      
+        let request = {
+          location: orlando,
+          radius: '500',
+          type: ['restaurant']
+        };
+      
+        service = new google.maps.places.PlacesService(map);
+        service.nearbySearch(request, callback);
+      }
+      
+      function callback(results, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+          for (var i = 0; i < results.length; i++) {
+            createMarker(results[i]);
+          }
+        }
+      }  
+      getElementById('map').addeventlistner('enter');
+      callback();
 }
 
 initMap();
