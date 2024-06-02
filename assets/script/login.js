@@ -1,40 +1,39 @@
-//file for form function if needed. 
-const clickyButton = document.querySelector('#clicky');
-
-// clickyButton.addEventListener('click',
-//     console.log('click');
-//     window.location.href = "./"
-// );
-const container = document.querySelector(".container");
-const signUpBtn = document.querySelector(".green-bg button");
-
-signUpBtn.addEventListener("click", () => {
-  container.classList.toggle("change");
-});
 
 
-let userInfo = {
-    username: '',
-    email: '',
-    password: '',
+const loginBtn = document.getElementById('login')
 
-}
 
-const submitSignUp = document.getElementById('blck-btn');
 
-submitSignUp.addEventListener("click", () => {
-   
-const signupName = document.getElementById('signup-userName')
-const email = document.getElementById('signup-emailInput')
-const password = document.getElementById('signup-passwordInput')
+loginBtn.addEventListener("click", (event) => {
+
+    event.preventDefault()
+
+    const passBtn = document.getElementById('passBall')
+    const emailLogin = document.getElementById('emailBall')
+    let loginObject = JSON.parse(localStorage.getItem(emailLogin.value));
+
    
 
+    console.log('login button', loginObject)
 
-    userInfo.username = signupName.value
-    userInfo.email = email.value
-    userInfo.password = password.value
+    let loginPassword = passBtn.value
+    let loginEmail = emailBall.value
 
-    localStorage.setItem(userInfo.username, JSON.stringify(userInfo));
+    console.log('login email', loginEmail)
+    console.log('login password', loginPassword)
 
-    console.log("beep", userInfo );
+    if (loginObject.email === loginEmail && loginObject.password === loginPassword) {
+        window.location.href = "./index.html"
+        console.log("login succesful");
+    } else {
+    
+            
+
+        console.log("LOGIN FAILED");
+
+    } 
+
+
+    
+
 });
