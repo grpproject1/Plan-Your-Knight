@@ -149,6 +149,7 @@ html {
 
 .input-group {
     position: relative;
+    padding-left: 16rem;
 }
 
 .input-group input {
@@ -181,3 +182,35 @@ html {
     margin-top: 3rem;
     cursor: pointer;
 }
+
+
+footer {
+    background-color: black;
+    height: 80px;
+    color: white;
+  }
+  
+  footer ul {
+    display: flex;
+    margin: 30px;
+    font-size: 15px;
+    list-style: none;
+    margin-top: 50px;
+  }
+  
+  footer ul li {
+    margin: 15px;
+  }
+  
+  footer ul li a {
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    border: 2px solid white;
+    margin-left: 75px;
+  } 

@@ -41,7 +41,7 @@ html {
 .roboto-mono-container {
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
-  font-weight: weight;
+  font-weight: <weight>;
   font-style: normal;
   
 }
@@ -55,6 +55,18 @@ html {
   z-index: 1px;
  }
 
+.form-check-label {
+  text-align: center;
+}
+
+.form-food {
+  font-size: 13px;
+}
+
+.form-parking {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
 
 main {
   height: 100%;
@@ -70,11 +82,8 @@ main {
 
 footer {
   background-color: black;
-  height: 100px;
-  color: rgb(255, 255, 255);
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+  height: 80px;
+  color: white;
 }
 
 footer ul {
@@ -82,7 +91,7 @@ footer ul {
   margin: 30px;
   font-size: 15px;
   list-style: none;
-  /* margin-top: 50px; */
+  margin-top: 50px;
 }
 
 footer ul li {
@@ -90,7 +99,7 @@ footer ul li {
 }
 
 footer ul li a {
-  color: rgb(255, 255, 255);
+  color: white;
   font-size: 13px;
   font-weight: 500;
   text-decoration: none;
@@ -98,46 +107,7 @@ footer ul li a {
   padding-right: 7px;
   padding-bottom: 2px;
   padding-top: 2px;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid white;
   margin-left: 75px;
 } 
 
-input[type=text], input[type=password] {
-  width: 100%;
-  font-size: 28px;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-button {
- 
-  cursor: pointer;
-  
-}
-
-.signup {
-  font-size: 18px;
-  font-weight: bold;
-  background-color: #9eaa58;
-  
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  width: 100%;
-  opacity: 0.9;
-  text-transform: uppercase;
-}
-
-button:hover {
-  opacity:1;
-}
-
-#clicky {
-  color:blue;
-  text-decoration: underline;
-  border-width: 0;
-  background-color: #f1f1f100;
-}
