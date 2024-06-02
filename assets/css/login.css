@@ -119,13 +119,14 @@ button {
 .signup {
   font-size: 18px;
   font-weight: bold;
-  background-color: rgb(10, 119, 13);
-  color: white;
+  background-color: #9eaa58;
+  
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   width: 100%;
   opacity: 0.9;
+  text-transform: uppercase;
 }
 
 button:hover {

@@ -51,7 +51,7 @@ html {
     color: #fff;
     width: 30rem;
     z-index: 100;
-    transition: left .8;
+    transition: left 0.8s;
 }
 
 .banner h1{
@@ -76,7 +76,7 @@ html {
     top:0;
     left: 0;
     z-index: 50;
-    transition: width 1.5s cubic-bezier(.19, 1, .22, 1);
+    transition: width 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .container.change .green-bg{
@@ -91,10 +91,10 @@ html {
     width: 16rem;
     height: 5rem;
     background-color: transparent;
-    border: .1rem solid #fff;
+    border: 0.1rem solid #fff;
     border-radius: 3rem;
     text-transform: uppercase;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
     color: #fff;
     cursor: pointer;
 }
