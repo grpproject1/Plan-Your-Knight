@@ -51,7 +51,7 @@ html {
     color: #fff;
     width: 30rem;
     z-index: 100;
-    transition: left .8;
+    transition: left 0.8s;
 }
 
 .banner h1{
@@ -76,7 +76,7 @@ html {
     top:0;
     left: 0;
     z-index: 50;
-    transition: width 1.5s cubic-bezier(.19, 1, .22, 1);
+    transition: width 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .container.change .green-bg{
@@ -91,10 +91,10 @@ html {
     width: 16rem;
     height: 5rem;
     background-color: transparent;
-    border: .1rem solid #fff;
+    border: 0.1rem solid #fff;
     border-radius: 3rem;
     text-transform: uppercase;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
     color: #fff;
     cursor: pointer;
 }
@@ -149,6 +149,7 @@ html {
 
 .input-group {
     position: relative;
+    padding-left: 16rem;
 }
 
 .input-group input {
@@ -181,3 +182,35 @@ html {
     margin-top: 3rem;
     cursor: pointer;
 }
+
+
+footer {
+    background-color: black;
+    height: 80px;
+    color: white;
+  }
+  
+  footer ul {
+    display: flex;
+    margin: 30px;
+    font-size: 15px;
+    list-style: none;
+    margin-top: 50px;
+  }
+  
+  footer ul li {
+    margin: 15px;
+  }
+  
+  footer ul li a {
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    border: 2px solid white;
+    margin-left: 75px;
+  } 

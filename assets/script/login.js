@@ -3,15 +3,38 @@ const clickyButton = document.querySelector('#clicky');
 
 // clickyButton.addEventListener('click',
 //     console.log('click');
-// window.location.href = "./"
+//     window.location.href = "./"
 // );
+const container = document.querySelector(".container");
+const signUpBtn = document.querySelector(".green-bg button");
+
+signUpBtn.addEventListener("click", () => {
+  container.classList.toggle("change");
+});
 
 
-const container = document.querySelector('.container');
+let userInfo = {
+    username: '',
+    email: '',
+    password: '',
 
-const signUpBtn = document.querySelector('.green-bg button');
+}
+
+const submitSignUp = document.getElementById('blck-btn');
+
+submitSignUp.addEventListener("click", () => {
+   
+const signupName = document.getElementById('signup-userName')
+const email = document.getElementById('signup-emailInput')
+const password = document.getElementById('signup-passwordInput')
+   
 
 
-signUpBtn.addEventListener('click', () => {
-    container.classList.toggle('change')
+    userInfo.username = signupName.value
+    userInfo.email = email.value
+    userInfo.password = password.value
+
+    localStorage.setItem(userInfo.username, JSON.stringify(userInfo));
+
+    console.log("beep", userInfo );
 });
