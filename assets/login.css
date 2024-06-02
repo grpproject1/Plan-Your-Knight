@@ -100,3 +100,29 @@ footer ul li a {
   margin-left: 75px;
 } 
 
+input[type=text], input[type=password] {
+  width: 100%;
+  font-size: 28px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+button {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(10, 119, 13);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
