@@ -41,7 +41,7 @@ html {
 .roboto-mono-container {
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: weight;
   font-style: normal;
   
 }
@@ -55,18 +55,6 @@ html {
   z-index: 1px;
  }
 
-.form-check-label {
-  text-align: center;
-}
-
-.form-food {
-  font-size: 13px;
-}
-
-.form-parking {
-  margin-bottom: 10px;
-  font-size: 13px;
-}
 
 main {
   height: 100%;
@@ -81,9 +69,10 @@ main {
 
 
 footer {
-  background-color: black;
+  /* background-color: black; */
   height: 80px;
-  color: white;
+  color: black;
+  width: 100%;
 }
 
 footer ul {
@@ -99,7 +88,7 @@ footer ul li {
 }
 
 footer ul li a {
-  color: white;
+  color: black;
   font-size: 13px;
   font-weight: 500;
   text-decoration: none;
@@ -107,7 +96,7 @@ footer ul li a {
   padding-right: 7px;
   padding-bottom: 2px;
   padding-top: 2px;
-  border: 2px solid white;
+  border: 2px solid black;
   margin-left: 75px;
 } 
 
