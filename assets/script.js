@@ -11,14 +11,14 @@ async function initMap() {
   var options = {
     zoom: 16,
     center: { lat: 28.601850034893445, lng: -81.19759825701948 },
-    
+
   }
 
   //new map
   var map = new
-  google.maps.Map(document.getElementById('map'), options);
-  
-  
+    google.maps.Map(document.getElementById('map'), options);
+
+
   const { Map } = await google.maps.importLibrary("maps");
 
 
@@ -218,12 +218,12 @@ const radioRestaurant = document.getElementById('flexRadioDefault1');
     // }
 
     //Check Content
-    if(props.content) {
+    if (props.content) {
       var infoWindow = new google.maps.InfoWindow({
-        content:props.content
+        content: props.content
       });
 
-      marker.addListener('click', function(){
+      marker.addListener('click', function () {
         infoWindow.open(map, marker);
       });
 
@@ -248,10 +248,10 @@ initMap();
 const parkingURL = "https://api.geoapify.com/v2/places?categories=parking&filter=circle:-81.197125012,28.59899755,1610&bias=proximity:-81.197125012,28.59899755&limit=20&apiKey=d3720612c9c24768b1672bff3ae0a512";
 
 fetch(parkingURL)
-  .then(function(response) {
+  .then(function (response) {
     return response.json();
   })
-  .then(function(data) {
+  .then(function (data) {
     const parkingObjects = [];
 
     for (let i = 0; i < data.features.length; i++) {
@@ -265,41 +265,40 @@ fetch(parkingURL)
 
     console.log(parkingObjects);
   })
-  .catch(function(error) {
+  .catch(function (error) {
     console.error('Error:', error);
   });
 
 
 
-  // for restaurant locations:
-  const restaurantsURL = "https://api.geoapify.com/v2/places?categories=catering.restaurant,catering.fast_food&filter=circle:-81.197125012,28.59899755,1610&bias=proximity:-81.197125012,28.59899755&limit=20&apiKey=d3720612c9c24768b1672bff3ae0a512";
+// for restaurant locations:
+const restaurantsURL = "https://api.geoapify.com/v2/places?categories=catering.restaurant,catering.fast_food&filter=circle:-81.197125012,28.59899755,1610&bias=proximity:-81.197125012,28.59899755&limit=20&apiKey=d3720612c9c24768b1672bff3ae0a512";
 
-  fetch(restaurantsURL)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(data) {
-      const restaurantObjects = [];
-  
-      for (let i = 0; i < data.features.length; i++) {
-        const feature = data.features[i];
-        const restaurantObj = {
-          name: feature.properties.name,
-          lat: feature.properties.lat,
-          long: feature.properties.lon
-        };
-        restaurantObjects.push(restaurantObj);
-      }
-  
-      console.log(restaurantObjects);
-    })
-    .catch(function(error) {
-      console.error('Error:', error);
-    });
+fetch(restaurantsURL)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    const restaurantObjects = [];
 
+    for (let i = 0; i < data.features.length; i++) {
+      const feature = data.features[i];
+      const restaurantObj = {
+        name: feature.properties.name,
+        lat: feature.properties.lat,
+        long: feature.properties.lon
+      };
+      restaurantObjects.push(restaurantObj);
+    }
 
+    console.log(restaurantObjects);
+  })
+  .catch(function (error) {
+    console.error('Error:', error);
+  });
 
 
 
 
-  
+
+
