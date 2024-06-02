@@ -164,5 +164,126 @@ initMap();
 
 
 
+    // Attempt to find users current location
+    // x=navigator.geolocation;
+
+    // x.getCurrentPosition(success, failure);
+
+    // function success(position){
+    //   let myLat = position.coords.latitude;
+    //   let myLong = position.coords.longitude;
+
+    //   let coords = new google.maps.LatLng(myLat, myLong);
+
+    //   const mapOptions = {
+    //     zoom: 14,
+    //     center: coords,
+    //     mapTypeId: google.maps.MapTypeId.ROADMAP
+    //   }
+
+    //   const map = new google.maps.Map(document.getElementById("map"),mapOptions)
+    //   const marker = new google.maps.Marker({
+    //     map:map,
+    //     position: coords
+    //   });
+    // }
+
+    // function failure(){}
 
 
+
+// fetch(url).then(response => {
+//   return response.json()
+// }).then(data => {
+//   console.log(data);
+// });
+
+// function searchBar
+// currentData = {
+//     query 
+
+
+// }
+
+
+// const input = document.getElementById("searchBar");
+// const searchBox = new google.maps.places.SearchBox(input);
+
+// findPlaceFromQuery(request, function(results, status) {
+//   if (status === google.maps.places.PlacesServiceStatus.OK) {
+//     for ( var i= 0; i <results.length; i++) {
+//       createMarker(results[i]);
+//     }
+//     map.setCenter(results[0].geometry.location);
+//   }
+// })
+
+
+
+// map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+// // Bias the SearchBox results towards current map's viewport.
+// map.addListener("bounds_changed", () => {
+//   searchBox.setBounds(map.getBounds());
+// });
+
+// let markers = [];
+
+// // Listen for the event fired when the user selects a prediction and retrieve
+// // more details for that place.
+// searchBox.addListener("places_changed", () => {
+//   const places = searchBox.getPlaces();
+
+//   if (places.length == 0) {
+//     return;
+//   }
+
+//   // Clear out the old markers.
+//   markers.forEach((marker) => {
+//     marker.setMap(null);
+//   });
+//   markers = [];
+
+//nearby search data?
+//console.Log(currentData)
+
+    //Add Marker
+  // var marker = new google.maps.Marker({
+  //   position:{lat:42.4668, lng: -70.9495},
+  //   map: map
+  // });
+
+  // var infoWindow = new google.maps.InfoWindow({
+  //   content:'<h1>woof</h1>'
+  // });
+
+  // marker.addListener('click', function(){
+  //   infoWindow.open(map, marker);
+  // });
+
+
+  //Custom Marker Template
+  // addMarker((
+  //   {coords:lat:  , lng:    },
+  //   iconImage: ''
+  //   content: '<h1> Insert Text Here </h1>
+  // ));
+
+  //Array of markers
+  // var markers = [
+  //   {
+  //     coords:{lat: 28.602023173142335, lng: -81.20025877273342,},
+  //     content:'<h1>bork bork</h1>'
+  //   },
+  //   {coords:{lat:42.4668, lng: -70.9495},
+  //   content: '<h1>morp</h1>'}
+
+
+  // ];
+
+  // //Loop through markers
+
+  // addMarker({coords:{lat:42.4668, lng: -70.9495}});
+  // addMarker({
+  //   coords:{lat: 28.602023173142335, lng: -81.20025877273342,},
+  //   content:'<h1>bork bork</h1>'
+  // });
