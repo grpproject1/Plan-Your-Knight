@@ -8,8 +8,7 @@ const url = "https://cors-anywhere-jung-48d4feb9d097.herokuapp.com/" + "https://
 
 
 
-
-
+// Function working with Google Places API to display the map on the page
 
 async function initMap() {
 
@@ -28,15 +27,16 @@ async function initMap() {
 
 
 
-// Filtering results by radio button
+// references the radio buttons from the HTML
 const radioParking = document.getElementById('flexRadioDefault2');
 const radioRestaurant = document.getElementById('flexRadioDefault1');
 
+// Filtering results by radio button click to generate the markers for parking on the page
   radioParking.addEventListener('click', function() {
     
     addMarker({
       coords:{lat: 28.59931385, lng: -81.19764343879355,},
-      content:'<h1>Parking</h1>'
+      content:'<h1>Parking (This is a Knight-gating Spot!)</h1>'
     });
     addMarker({
       coords:{lat: 28.5989923, lng: -81.19753491921549,},
@@ -52,11 +52,11 @@ const radioRestaurant = document.getElementById('flexRadioDefault1');
     });
     addMarker({
       coords:{lat: 28.59726535, lng: -81.1974185836448,},
-      content:'<h1>Parking</h1>'
+      content:'<h1>Parking (This is a Knight-gating Spot!)</h1>'
     });
     addMarker({
       coords:{lat: 28.5972515, lng: -81.19732777976934,},
-      content:'<h1>Parking</h1>'
+      content:'<h1>Parking (This is a Knight-gating Spot!)</h1>'
     });
     addMarker({
       coords:{lat: 28.59729765, lng: -81.19658849689151,},
@@ -64,7 +64,7 @@ const radioRestaurant = document.getElementById('flexRadioDefault1');
     });
     addMarker({
       coords:{lat: 28.596887000000002, lng: -81.196147443348,},
-      content:'<h1>Parking</h1>'
+      content:'<h1>Parking (This is a Knight-gating Spot!)</h1>'
     });
     addMarker({
       coords:{lat: 28.601376700000003, lng: -81.19602257741718,},
@@ -72,7 +72,7 @@ const radioRestaurant = document.getElementById('flexRadioDefault1');
     });
     addMarker({
       coords:{lat: 28.59702355, lng: -81.1989022761598,},
-      content:'<h1>Parking</h1>'
+      content:'<h1>Parking (This is a Knight-gating Spot!)</h1>'
     });
     addMarker({
       coords:{lat: 28.596522, lng: -81.19800161744283,},
@@ -84,7 +84,7 @@ const radioRestaurant = document.getElementById('flexRadioDefault1');
     });
     addMarker({
       coords:{lat: 28.5961117, lng: -81.19668386523279,},
-      content:'<h1>Parking</h1>'
+      content:'<h1>Parking (This is a Knight-gating Spot!)</h1>'
     });
     addMarker({
       coords:{lat: 28.5964679, lng: -81.1967058,},
@@ -96,7 +96,7 @@ const radioRestaurant = document.getElementById('flexRadioDefault1');
     });
     addMarker({
       coords:{lat: 28.60256305, lng: -81.19571185092033,},
-      content:'<h1>Parking</h1>'
+      content:'<h1>Parking (This is a Knight-gating Spot!)</h1>'
     });
     addMarker({
       coords:{lat: 28.6017295, lng: -81.1963112,},
@@ -112,11 +112,11 @@ const radioRestaurant = document.getElementById('flexRadioDefault1');
     });
     addMarker({
       coords:{lat: 28.601756, lng: -81.1958105,},
-      content:'<h1>Parking</h1>'
+      content:'<h1>Parking (This is a Knight-gating Spot!)</h1>'
     });
   });
 
-
+// Filtering results by radio button click to generate the markers for restaurants on the page
   radioRestaurant.addEventListener('click', function() {
     
     addMarker({
@@ -202,10 +202,6 @@ const radioRestaurant = document.getElementById('flexRadioDefault1');
 }); 
 
 
-    //Add Marker Function
-    //in order to add a custom image 
-    //icon: props.iconImage
-    //needs to be added under map:map inside of this function
   function addMarker(props){
     var marker = new google.maps.Marker({
       position: props.coords,
@@ -213,14 +209,6 @@ const radioRestaurant = document.getElementById('flexRadioDefault1');
       //icon:props.iconImage
     });
 
-
-    //If you guys implement custom icons uncomment this
-
-    // //Check for customicon
-    // if(props.iconImage){
-    //   //Set icon image
-    //   marker.secIcon(props.iconImage);
-    // }
 
     //Check Content
     if (props.content) {
@@ -246,7 +234,7 @@ initMap();
 // ////////////////////////////////////////////////////////////////////////// (SECOND API: geoapify)
 
 // API Key for GeoApify: d3720612c9c24768b1672bff3ae0a512
-// The below data is all pulled via the geoapify API to populate the closest restaurant and parking locations (up to 20 each) within 1 mile radius of UCF
+// The below data is all pulled via the geoapify API to populate the closest restaurant and parking locations (limited to 20 each) within 1 mile radius of UCF and log to console as objects in an array
 
 
 // for parking locations:
