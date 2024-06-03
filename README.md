@@ -18,8 +18,10 @@ click link to view [website](https://grpproject1.github.io/Plan-Your-Knight/).
 
 ## Preview
 
-![example website]()
+![example website](./assets/img/mainscreenshot.png)
 
-![example website]()
+![example website](./assets/img/loginScreenshot.png)
+
+![example website](./assets/img/signinScreenshot.png)
 
 
