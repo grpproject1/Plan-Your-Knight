@@ -27,7 +27,7 @@ loginBtn.addEventListener("click", (event) => {
         console.log("login succesful");
     } else {
     
-            
+        alert("Incorrect Password. Please try again.");    
 
         console.log("LOGIN FAILED");
 

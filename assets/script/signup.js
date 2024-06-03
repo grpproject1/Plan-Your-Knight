@@ -28,6 +28,6 @@ const password = document.getElementById('signup-passwordInput')
     userInfo.password = password.value
 
     localStorage.setItem(userInfo.email, JSON.stringify(userInfo));
-
+    window.location.href = "./login.html"
     console.log("beep", userInfo );
 });
